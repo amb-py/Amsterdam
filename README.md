@@ -10,14 +10,12 @@ When we consider all these problems, we can create a map and information chart w
 
 ## Data Description
 To consider the problem we can list the datas as belows
-* Detailed overview of the 578 neighborhoods and boroughs in the municipality of Amsterdam can be found at (https://allcharts.info/the-netherlands/overview-municipality-amsterdam/) found the Second-level Administrative Divisions of the Turkey from Spatial Data Repository of NYU [2]. The .json file has coordinates of the all city of Turkey. I cleaned the data and reduced it to city of Istanbul ([Here is my .json file](https://github.com/Srcanyildiz/istanbul/blob/master/istanbul_geo_1.json)) where I used it to create **choropleth** map of Housing Sales Price Index of Istanbul.
-* I used **Forsquare API** to get the most common venues of given Borough of Istanbul [3].
-* There are not too many public datas related to demographic and social parameters for the city of Istanbul. Therefor you must set-up your own data tables in most cases. In this case, I collected latest per square meter Housing Sales Price Averages ([Here is my datas](https://github.com/Srcanyildiz/istanbul/blob/master/istanbul_geo.csv)) for each Borough of Istanbul from housing retail web page [4].
-* I used **Google Map**, 'Search Nearby' option to get the center coordinates of the each Borough. ([Here is my datas](https://github.com/Srcanyildiz/istanbul/blob/master/istanbul_geo.csv)) [5].
+* Detailed overview of the 578 neighborhoods and boroughs in the municipality of Amsterdam can be found at (https://allcharts.info/the-netherlands/overview-municipality-amsterdam/) . details(Regionname, Regiontype, Zip code, #Inhabitants, #Addresses, #Houses) for each neighbourhoods were webscrapped to create initial dataframe .
+* I used ARCGIS library to get the latitude and longitude values of different neighbourhoods of Amsterdam on the bases of their pincodes and added back to main dataframe.
+* I used **Forsquare API** to get the most common venues of given Borough of Amsterdam [3].
+
 
 ### References:
 * [1] [Amsterdam - Wikipedia](https://en.wikipedia.org/wiki/Amsterdam)
 * [2] [City of Amsterdam](https://www.amsterdam.nl/en/districts/)
 * [3] [Forsquare API](https://developer.foursquare.com/)
-* [4] [Housing Sales Prices of each Borough from "Hurriyet Retail Index for 2018"](https://www.hurriyetemlak.com/Emlak-Endeksi/Detayli-Analiz/Istanbul)
-* [5] [Google Map](https://www.google.com/maps/)
